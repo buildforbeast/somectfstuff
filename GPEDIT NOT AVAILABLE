@@ -1,0 +1,14 @@
+Faced a problem of command gpedit.msc while run but found that this command is turn of for windows home edition users  
+
+So we have to add a line using  command prompt in administrator mode
+
+
+FOR %F IN (“%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum”) DO (DISM /Online /NoRestart /Add-Package:”%F”)
+FOR %F IN (“%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum”)
+DO (DISM /Online /NoRestart /Add-Package:”%F”)
+
+DISM 
+   is a deployment  management tool for windows features and services installer
+
+
+
