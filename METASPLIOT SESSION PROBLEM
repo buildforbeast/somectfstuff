@@ -1,0 +1,20 @@
+It happens with me  when getting reverse shell in metasploit when I  again set payload and lport its says already running 
+
+
+So to first search if ports are still running 
+
+Netstat -anpl | grep <port no >
+If yes then kill it 
+Or 
+You can use
+Sudo lsof -i:<port> { if metasploit port are still listening }
+
+
+Kill it with
+Sudo kill -9 PID  you find in above lsof step the PID 
+
+
+
+
+
+
